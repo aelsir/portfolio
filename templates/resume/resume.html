@@ -1,0 +1,28 @@
+{% load static %}
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Manager</title>
+    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+</head>
+
+<body>
+    <div class="bg-white-500 p-4 flex justify-between">
+        <div class="text-black" id="aelsir">aelsir</div>
+        <button class="bg-gray-500 rounded-full flex items-center text-white px-4 py-2">
+          <span id='contact'>Contact</span>
+          <div class="ml-2 bg-black rounded-full p-2">
+            <!-- Replace the arrow with your desired icon or SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/>
+              <path d="M13 7l-3 3-3-3h6zm0 10v-6h2v6h-2z"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+</body>
+</html>

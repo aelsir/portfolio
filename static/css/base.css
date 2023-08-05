@@ -1,0 +1,32 @@
+/* Define brand colors as CSS variables */
+:root {
+    --brand-color-first: #5CE1E6;
+    --brand-color-seconf: #C1FF72;
+    --brand-color-third: #FFDE59;
+  }
+
+  @font-face {font-family: popins-thin; src: url('/static/fonts/Poppins-Thin.ttf');}
+  @font-face {font-family: popins-light; src: url('/static/fonts/Poppins-Light.ttf');}
+  @font-face {font-family: popins-regular; src: url('/static/fonts/Poppins-Regular.ttf');}
+  @font-face {font-family: popins-medium; src: url('/static/fonts/Poppins-Medium.ttf');}
+  @font-face {font-family: popins-bold; src: url('/static/fonts/Poppins-Bold.ttf');}
+  @font-face {font-family: popins-black; src: url('/static/fonts/Poppins-Black.ttf');}
+
+:root {
+    --brand-font-thin: popins-thin;
+    --brand-font-light: popins-light;
+    --brand-font-regular: popins-regular;
+    --brand-font-medium: popins-medium;
+    --brand-font-bold: popins-bold;
+    --brand-font-black: popins-black;
+    --brand-font-size: 20px
+}
+
+  /* Define brand font */
+
+body {
+    margin: 8px; /* Example value, may vary */
+    padding: 8px; /* Example value, may vary */
+    font-family: var(--brand-font-regular);
+    font-size: var(--brand-font-size)
+}
