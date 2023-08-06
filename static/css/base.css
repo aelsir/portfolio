@@ -19,14 +19,13 @@
     --brand-font-medium: popins-medium;
     --brand-font-bold: popins-bold;
     --brand-font-black: popins-black;
-    --brand-font-size: 20px
+    --brand-font-size: 16px
 }
 
   /* Define brand font */
 
 body {
-    margin: 8px; /* Example value, may vary */
-    padding: 8px; /* Example value, may vary */
+    margin: 50px;
     font-family: var(--brand-font-regular);
     font-size: var(--brand-font-size)
 }
