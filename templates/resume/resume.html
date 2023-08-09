@@ -11,41 +11,42 @@
     {% tailwind_css %}
 </head>
 
-<body class="container mx-auto py-12 px-6">
+<body class="container mx-auto py-12 lg:px-6">
 
-    <nav class="bg-white-500 p-2 flex justify-between">
-        <div class="text-black text-3xl" id="aelsir">aelsir</div>
+    <nav class="bg-white-500 pb-5 flex justify-between">
+        <div class="text-black text-4xl" id="aelsir">aelsir</div>
 
-        <button class="bg-[#D9D9D9] rounded-full flex text-black p-1 items-center">
-            <span id='contact' class='pl-2'>Contact</span>
+        <button class="bg-[#D9D9D9] rounded-full flex text-black p-1 items-center lg:scale-75">
+            <span id='contact' class='pl-2 text-4xl' style="font-family: var(--brand-font-light)">Contact</span>
             <div class="ml-2 bg-black rounded-full p-1">
             <!-- Replace the arrow with your desired icon or SVG -->
-            <img class="w-6" src="{% static 'svg/right-arrow.svg' %}" alt="arrow">
+            <img class="w-10" src="{% static 'svg/right-arrow.svg' %}" alt="arrow">
             </div>
         </button>
     </nav>
 
-    <div class="grid items-streatch justify-center items-center grid-cols-1 
-    lg:grid-cols-2 gap-8">
+    <div class="grid items-stretch justify-center items-center pt-5 gap-8 grid-cols-1 
+    lg:grid-cols-2">
         <!-- This is the Photo section -->
         <div class="">
-            <img src="{% static 'img/pm.png' %}" alt="Product Manager">
+            <img class="mx-auto" src="{% static 'img/pm.png' %}" alt="Product Manager">
         </div>
 
         <div>
-            <div class="flex flex-col justify-center items-left space-y-8">
+            <div class="flex flex-col justify-center items-center text-center space-y-5">
                 <h1 style="font-family: var(--brand-font-bold)"
-                class="text-8xl">
+                class="text-8xl lg:text-7xl">
                 Leading the Way to Product Excellence
                 </h1>
     
                 <h3 style="font-family: var(--brand-font-light)" class="text-4xl">Proven track record of driving successful product and innovation with different prospective.</h3>
-    
-                <button class="bg-[#5CE1E6] rounded-full flex text-black p-1 items-center w-[153px]">
-                    <span id='contact' class='pl-2 text-2xl'>Hire Me!</span>
+                
+
+                <button class="bg-[#5CE1E6] rounded-full flex text-black p-1 items-center ">
+                    <span id='contact' class='pl-2 text-4xl'>Hire Me!</span>
                     <div class="ml-2 bg-black rounded-full p-1">
                     <!-- Replace the arrow with your desired icon or SVG -->
-                    <img class="w-6" src="{% static 'svg/right-arrow.svg' %}" alt="arrow">
+                    <img class="w-12" src="{% static 'svg/right-arrow.svg' %}" alt="arrow">
                     </div>
                 </button>
     
