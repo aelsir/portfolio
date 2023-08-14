@@ -2,7 +2,7 @@
 {% load static tailwind_tags %}
 
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 <head>
     <title>Product Manager</title>
     
@@ -25,33 +25,39 @@
         </nav>
 
         <!--Hero Section-->
-        <div class="grid items-center pt-5 gap-8 grid-cols-1
+        <div class="grid items-center py-5 gap-8 grid-cols-1
         lg:grid-cols-2 align-middle">
 
             <!-- This is the Photo section -->
-            <div class="order-2 lg:order-1">
+            <div class="flex order-2 lg:order-1 h-full px-7 bg-[#FFF8C1] rounded-3xl lg:rounded-none lg:rounded-s-3xl items-end">
                 <img class="mx-auto" src="{% static 'img/pm.png' %}" alt="Product Manager">
             </div>
 
-            <div class="order-1 lg:order-2 grid grid-cols-1 text-center justify-between place-items-center lg:place-items-start lg:text-left  space-y-5">
 
-                <h1 style="font-family: var(--brand-font-bold)"
-                class="text-8xl lg:text-6xl">
-                Leading the Way to Product Excellence
-                </h1>
 
-                <h3 style="font-family: var(--brand-font-light)" class="text-4xl lg:text-3xl">Proven track record of driving successful product and innovation with different prospective.</h3>
-                
+            <div class="flex order-1 lg:order-2
+            h-full bg-gradient-to-r from-[#FFF8C1] to-[#FFA9F9] bg-opacity-50 p-7 rounded-3xl lg:rounded-none lg:rounded-e-3xl items-center">
+                <div class="grid text-center justify-center align-center items-center place-items-center lg:place-items-start lg:text-left space-y-7">
+                    <h1 style="font-family: var(--brand-font-bold)"
+                    class="text-8xl lg:text-6xl">
+                    Leading the Way to Product Excellence
+                    </h1>
+    
+                    <h3 style="font-family: var(--brand-font-light)" class="text-4xl lg:text-3xl">Proven track record of driving successful product and innovation with different prospective.</h3>
+                    
+    
+                    <button class="bg-[#5CE1E6] w-[225px] rounded-full flex text-black p-1 items-center">
+                        <span id='contact' class='pl-2 text-4xl'>Hire Me!</span>
+                        <div class="ml-2 bg-black rounded-full p-1">
+                        <!-- Replace the arrow with your desired icon or SVG -->
+                        <img class="w-12" src="{% static 'svg/right-arrow.svg' %}" alt="arrow">
+                        </div>
+                    </button>
 
-                <button class="bg-[#5CE1E6] w-[225px] rounded-full flex text-black p-1 items-center">
-                    <span id='contact' class='pl-2 text-4xl'>Hire Me!</span>
-                    <div class="ml-2 bg-black rounded-full p-1">
-                    <!-- Replace the arrow with your desired icon or SVG -->
-                    <img class="w-12" src="{% static 'svg/right-arrow.svg' %}" alt="arrow">
-                    </div>
-                </button>
-
+                </div>
             </div>
+                
+            
         </div>
     </div>
 
@@ -65,6 +71,10 @@
         <img class="w-[80px]" src="{% static 'svg/sparkle.svg' %}" alt="">
         <h2>Develop</h2>
         <img class="w-[80px]" src="{% static 'svg/sparkle.svg' %}" alt="">
+    </div>
+
+    <div class="container mx-auto pt-12 lg:px-6">
+        
     </div>
 
 
