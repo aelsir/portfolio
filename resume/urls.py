@@ -19,6 +19,6 @@ from django.urls import path, include
 from .views import index, demo
 
 urlpatterns = [
-    path('', index, name='home'),
+    path('<str:abb>', index, name='home'),
     path('demo/', demo, name="demo")
 ]
