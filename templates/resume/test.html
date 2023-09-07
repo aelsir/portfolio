@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
-    <title>{{role.name}}</title>
+    <title>Product Manager</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <style>
         /* Define brand colors as CSS variables */
         :root {
-            --brand-color-first: {{role.first_color}};
-            --brand-color-second: {{role.second_color}};
-            --brand-color-third: {{role.third_color}};
+            --brand-color-first: #5CE1E6;
+            --brand-color-second: #59FF69;
+            --brand-color-third: #f5ff87;
         }
 
         @font-face {font-family: popins-thin; src: url('/static/fonts/Poppins-Thin.ttf');}
@@ -51,7 +51,7 @@
         <div class="container justify-center grid mx-auto mx-12 items-center py-5 gap-8 grid-cols-1 lg:grid-cols-2 align-middle">
             <!-- This is the Photo section -->
             <div class="flex order-2 lg:order-1 h-full px-7 bg-[var(--brand-color-third)] rounded-3xl lg:rounded-none lg:rounded-s-3xl items-end">
-                <img class="mx-auto" src="{{role.img.url}}" alt="Product Manager">
+                <img class="mx-auto" src="{% static 'img/hero/pm.png' %}" alt="Product Manager">
             </div>
             <!--Description Section-->
             <div class="flex order-1 lg:order-2
@@ -59,10 +59,10 @@
                 <div class="grid text-center justify-center align-center items-center place-items-center lg:place-items-start lg:text-left space-y-7">
                     <h1 style="font-family: var(--brand-font-bold)"
                     class="text-8xl lg:text-6xl">
-                    {{role.title}}
+                    Leading the Way to Product Excellence
                     </h1>
     
-                    <h3 style="font-family: var(--brand-font-light)" class="text-4xl lg:text-3xl">{{role.slogan}}</h3>
+                    <h3 style="font-family: var(--brand-font-light)" class="text-4xl lg:text-3xl">Proven track record of driving successful product and innovation with different prospective.</h3>
                     
     
                     <button class="bg-[var(--brand-color-first)] rounded-full flex text-black p-1 items-center justify-between gap-2">
@@ -89,24 +89,36 @@
     <!--Projects-->
     <div class="container mx-auto py-4 lg:px-6 ">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {% for project in role.projects.all %}
-            
+
             <!--First Project-->
             <div class="">
                 <div class="bg-gradient-to-r from-[var(--brand-color-third)] rounded-[40px] p-12">
                     <div class="flex justify-between py-2">
-                        <div class="text-5xl lg:text-3xl" style="font-family: var(--brand-font-bold)">{{project.title}}</div>
-                        <a href="{{project.url}}"><img class="w-10 -rotate-45" src="{% static 'svg/next.svg' %}" alt="arrow"></a>
-                        
+                        <div class="text-5xl lg:text-3xl" style="font-family: var(--brand-font-bold)">Code_ Sudan Registration</div>
+                        <img class="w-10 -rotate-45" src="{% static 'svg/next.svg' %}" alt="arrow">
                     </div>
                     <div class="text-3xl lg:text-xl py-4">
-                        {{project.description}}
+                        a user-friendly registration platform tailored to the Sudanese market. The platform now empowers customers with a seamless registration experience,
                     </div>
-                    <img src="{{project.img.url}}" alt="">
+                    <img src="{% static 'img/projects/codesudan-project.png' %}" alt="">
                 </div>
             </div>
 
-            {% endfor %}
+
+                <!--First Project-->
+            <div class="">
+                <div class="bg-gradient-to-r from-[var(--brand-color-third)] rounded-[40px] p-12">
+                    <div class="flex justify-between py-2">
+                        <div class="text-5xl lg:text-3xl" style="font-family: var(--brand-font-bold)">Code_ Sudan Registration</div>
+                        <img class="w-10 -rotate-45" src="{% static 'svg/next.svg' %}" alt="arrow">
+                    </div>
+                    <div class="text-3xl lg:text-xl py-4">
+                        a user-friendly registration platform tailored to the Sudanese market. The platform now empowers customers with a seamless registration experience,
+                    </div>
+                    <img src="{% static 'img/projects/energicity.png' %}" alt="">
+                </div>
+            </div>
+            
             
         </div>
     </div>
@@ -114,29 +126,20 @@
     <!--4 Words Discover...-->
     <div class="flex w-full text-3xl justify-center items-center gap-3 bg-black text-white my-5" style="font-family: var(--brand-font-bold)">
         <h2 class="">Discover</h2>
-        <svg class="w-[80px]" id="Layer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="sparkle" d="m21.137 11.519-2.726-.779a7.453 7.453 0 0 1 -5.151-5.151l-.779-2.726a.52.52 0 0 0 -.962 0l-.779 2.726a7.453 7.453 0 0 1 -5.151 5.151l-2.726.779a.5.5 0 0 0 0 .962l2.726.779a7.453 7.453 0 0 1 5.151 5.151l.779 2.726a.5.5 0 0 0 .962 0l.779-2.726a7.453 7.453 0 0 1 5.151-5.151l2.726-.779a.5.5 0 0 0 0-.962z" fill="var(--brand-color-second)"/></svg>
+        <img class="w-[80px]" src="{% static 'svg/sparkle.svg' %}" alt="">
         <h2>Definition</h2>
-
-        <svg class="w-[80px]" id="Layer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="sparkle" d="m21.137 11.519-2.726-.779a7.453 7.453 0 0 1 -5.151-5.151l-.779-2.726a.52.52 0 0 0 -.962 0l-.779 2.726a7.453 7.453 0 0 1 -5.151 5.151l-2.726.779a.5.5 0 0 0 0 .962l2.726.779a7.453 7.453 0 0 1 5.151 5.151l.779 2.726a.5.5 0 0 0 .962 0l.779-2.726a7.453 7.453 0 0 1 5.151-5.151l2.726-.779a.5.5 0 0 0 0-.962z" fill="var(--brand-color-second)"/></svg>
-
+        <img class="w-[80px]" src="{% static 'svg/sparkle.svg' %}" alt="">
         <h2>Design</h2>
-
-        <svg class="w-[80px]" id="Layer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="sparkle" d="m21.137 11.519-2.726-.779a7.453 7.453 0 0 1 -5.151-5.151l-.779-2.726a.52.52 0 0 0 -.962 0l-.779 2.726a7.453 7.453 0 0 1 -5.151 5.151l-2.726.779a.5.5 0 0 0 0 .962l2.726.779a7.453 7.453 0 0 1 5.151 5.151l.779 2.726a.5.5 0 0 0 .962 0l.779-2.726a7.453 7.453 0 0 1 5.151-5.151l2.726-.779a.5.5 0 0 0 0-.962z" fill="var(--brand-color-second)"/></svg>
-
+        <img class="w-[80px]" src="{% static 'svg/sparkle.svg' %}" alt="">
         <h2>Develop</h2>
-
-        <svg class="w-[80px]" id="Layer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="sparkle" d="m21.137 11.519-2.726-.779a7.453 7.453 0 0 1 -5.151-5.151l-.779-2.726a.52.52 0 0 0 -.962 0l-.779 2.726a7.453 7.453 0 0 1 -5.151 5.151l-2.726.779a.5.5 0 0 0 0 .962l2.726.779a7.453 7.453 0 0 1 5.151 5.151l.779 2.726a.5.5 0 0 0 .962 0l.779-2.726a7.453 7.453 0 0 1 5.151-5.151l2.726-.779a.5.5 0 0 0 0-.962z" fill="var(--brand-color-second)"/></svg>
-        
+        <img class="w-[80px]" src="{% static 'svg/sparkle.svg' %}" alt="">
     </div>
 
 
     <!--Work experience-->
     <div class="container mx-auto p-12 lg:px-6">
         <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px lg:before:mx-auto lg:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-black before:to-transparent">
-
-            
-            {% for work in role.works.all %} 
-            
+            <!-- Item #1 -->
             <div class="relative flex items-center justify-between lg:justify-normal lg:odd:flex-row-reverse group is-active">
                 <!-- Icon -->
                 <div class="flex items-center justify-center w-10 h-10 rounded-full bg-black group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 lg:order-1 lg:group-odd:-translate-x-1/2 lg:group-even:translate-x-1/2">
@@ -148,20 +151,15 @@
                 <!-- Card -->
                 <div class="w-[calc(100%-4rem)] lg:w-[calc(50%-2.5rem)] p-4 space-y-2">
                     <div class="flex items-left justify-between space-x-2 mb-1">
-                        <div class="text-2xl lg:text-xl">{{work.company}} - {{work.country}}</div>
-                        <time class="text-2xl lg:text-xl">{{work.start_year}} - {{work.end_year}}</time>
+                        <div class="text-2xl lg:text-xl">EIDU - Kenya</div>
+                        <time class="text-2xl lg:text-xl">2019 - 2020</time>
                     </div>
-                    <div class="text-4xl lg:text-3xl" style="font-family: var(--brand-font-bold)">  {{work.title}}</div>
-                    <p class="text-2xl lg:text-xl">{{work.description}}</p>
-                    <div style="font-family: var(--brand-font-thin)" class="lg:text-xl">Skills: {% for skill in work.skills.all %} {{skill.name}} . {% endfor %}
-                        
-                    </div>
+                    <div class="text-4xl lg:text-3xl" style="font-family: var(--brand-font-bold)">  Assosiate Product Manager</div>
+                    <p class="text-2xl lg:text-xl">I worked as a product manager for the electricity platform, I was responsible for so many things</p>
+                    <div style="font-family: var(--brand-font-thin)" class="lg:text-xl">Skills: SQL · Analytical Skills · Design Thinking · Human Center Design</div>
                 </div>
                 
             </div>
-            
-            {% endfor %}
-            
         </div>
     </div>
 
@@ -201,4 +199,3 @@
     
 </body>
 </html>
-

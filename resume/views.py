@@ -1,15 +1,18 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from .models import roles_shortcut, Role
+from .models import *
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 def index(request, abb):
-    role = Role.objects.get(abb = abb)
-    print(f"the projects are {role.works.all()}")
+    try:
+        role = Role.objects.get(abbreviation = abb)
+    except ObjectDoesNotExist:
+        # Handle the case where the Role does not exist
+        role = None
     
     return render(request, 'resume/resume.html', {
         'role': role
     })
 
-def demo(request):
-    return render(request, 'resume/demo.html')
+def test(request):
+    return render(request, 'resume/test.html')

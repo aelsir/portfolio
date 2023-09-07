@@ -46,7 +46,7 @@ class Work(models.Model):
 
 class Role(models.Model):
     # Text
-    abb = models.CharField(max_length=2, choices=ROLES_CHOICES)
+    abbreviation = models.CharField(max_length=2, choices=ROLES_CHOICES)
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     slogan = models.CharField(max_length=150)
